@@ -1,8 +1,8 @@
 {
-  "name": "intercom",
+  "name": "js-intercom",
   "version": "1.0.0",
   "description": "communication bus : pub/sub",
-  "main": "index.js",
+  "main": "dist/intercom.js",
   "repository": "https://github.com/alfu32/react-intercom.git",
   "author": "alfu32",
   "license": "MIT",

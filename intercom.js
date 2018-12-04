@@ -19,6 +19,12 @@ function Intercom(params){
 		if(!channels[channel] )channels[channel]=[];
 		channels[channel].push(data);
 	}
+	this.channels=function(){
+		return channels;
+	}
+	this.subscribers=function(){
+		return subscribers;
+	}
 	function __worker(){
 		Object.keys(channels).forEach(function(chn){
 			channels[chn]=channels[chn].filter(function(data){
@@ -34,4 +40,7 @@ function Intercom(params){
 Intercom.getInstance=function(){return intercom }
 intercom = new Intercom();
 
-export default intercom;
+module.exports={
+	intercom:intercom,
+	Intercom:Intercom
+}
