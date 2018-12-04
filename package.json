@@ -1,0 +1,10 @@
+{
+  "name": "intercom",
+  "version": "1.0.0",
+  "description": "communication bus : pub/sub",
+  "main": "index.js",
+  "repository": "https://github.com/alfu32/react-intercom.git",
+  "author": "alfu32",
+  "license": "MIT",
+  "private": false
+}
