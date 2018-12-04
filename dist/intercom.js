@@ -44,6 +44,5 @@ Intercom.getInstance=function(){
 
 
 module.exports={
-	intercom:intercom,
 	Intercom:Intercom
 }
