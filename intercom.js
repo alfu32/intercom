@@ -1,4 +1,4 @@
-var intercom;
+var intercom=null;
 
 function Intercom(params){
 	console.log("create Intercom instance");
@@ -34,13 +34,15 @@ function Intercom(params){
 				return false;
 			})
 		})
-		setTimeout(__worker.bind(this),40);
+		this.timeout = setTimeout(__worker.bind(this),40);
 	}
 }
-Intercom.getInstance=function(){return intercom }
-intercom = new Intercom();
+Intercom.getInstance=function(){ 
+	if(intercom === null ) intercom = new Intercom();
+	return intercom;
+}
+
 
 module.exports={
-	intercom:intercom,
 	Intercom:Intercom
 }
